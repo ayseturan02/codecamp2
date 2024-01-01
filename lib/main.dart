@@ -18,13 +18,40 @@ class CodeCamp extends StatelessWidget {
             "deneme",
             style: TextStyle(
               letterSpacing: 3,
+              fontStyle: FontStyle.italic,
               color: Colors.grey,
             ),
           ),
           centerTitle: true,
-
-
         ),
+         body: Row(
+           children: [
+             Padding(
+               padding: const EdgeInsets.all(10.0),
+               child: Card(
+                 color: Colors.blue,
+                 shape: RoundedRectangleBorder(
+                   borderRadius: BorderRadius.circular(20.0),
+                 ),
+                 elevation: 20,
+                 child: Container(
+                   width: 175,
+                   height: 175,
+                   child: const Column(
+                     children: [
+                       Icon(
+                         Icons.person,
+                         color: Colors.white,
+                         size: 60,
+                       ),
+                       Text("person"),
+                     ],
+                   ),
+                 ),
+               ),
+             ),
+           ],
+         ),
       ),
     );
   }
